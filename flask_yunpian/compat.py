@@ -23,7 +23,7 @@ is_py2 = (_ver[0] == 2)
 is_py3 = (_ver[0] == 3)
 
 if is_py2:
-    basestring = basestring  # noqa
+    str = str  # noqa
 
 elif is_py3:
-    basestring = (str, bytes)
+    str = (str, bytes)

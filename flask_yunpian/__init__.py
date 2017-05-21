@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
-from .compat import basestring
+from .compat import str
 
 
 class YunPianError(Exception):
@@ -32,7 +32,7 @@ class YunPian(object):
         """
         assert phones
 
-        if isinstance(phones, basestring):
+        if isinstance(phones, str):
             url = 'https://sms.yunpian.com/v2/sms/single_send.json'
             mobile = phones
         else:
